@@ -1,0 +1,35 @@
+[
+  {
+    "id": "apt-001",
+    "doctor_email": "doctor@clinic.com",
+    "patient_email": "patient@test.com",
+    "date": "2024-01-20",
+    "time": "10:00",
+    "reason": "Regular checkup",
+    "status": "Scheduled",
+    "ai_notes": "",
+    "created_at": "2024-01-10 14:00:00"
+  },
+  {
+    "id": "apt-002",
+    "doctor_email": "doctor@clinic.com",
+    "patient_email": "AVAILABLE",
+    "date": "2024-01-21",
+    "time": "09:00",
+    "reason": "Available Slot",
+    "status": "Available",
+    "ai_notes": "",
+    "created_at": "2024-01-10 14:00:00"
+  },
+  {
+    "id": "apt-003",
+    "doctor_email": "doctor@clinic.com",
+    "patient_email": "AVAILABLE",
+    "date": "2024-01-21",
+    "time": "14:00",
+    "reason": "Available Slot",
+    "status": "Available",
+    "ai_notes": "",
+    "created_at": "2024-01-10 14:00:00"
+  }
+]

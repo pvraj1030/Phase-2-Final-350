@@ -1,0 +1,14 @@
+{
+  "doctor@clinic.com": {
+    "email": "doctor@clinic.com",
+    "password": "8d969eef6ecad3c29a3a873fba1701512ffb4dc6bb3a3ba4c8bfc27b17f00e79",
+    "role": "Doctor",
+    "created_at": "2024-01-01 09:00:00"
+  },
+  "patient@test.com": {
+    "email": "patient@test.com",
+    "password": "f7d4d3cc9ba6e1309a686b20179a8d1e0e49fb74cd27e697c1bb0f6e5e21c5a0",
+    "role": "Patient",
+    "created_at": "2024-01-01 10:00:00"
+  }
+}
