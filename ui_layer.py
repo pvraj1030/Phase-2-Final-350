@@ -65,7 +65,58 @@ def render_registration_page():
         else:
             st.error("Please fill in all fields.")
 
+
+def apply_role_theme():
+    if st.session_state.get("user_role") == "Doctor":
+        primary_color = "#1a6b8a"
+    else:
+        primary_color = "#2e7d4f"
+
+    st.markdown(f"""
+        <style>
+            /* Buttons */
+            .stButton > button,
+            div.stButton > button,
+            button[kind="primary"],
+            button[kind="secondary"] {{
+                background-color: {primary_color} !important;
+                color: white !important;
+                border: none !important;
+                border-radius: 8px !important;
+            }}
+            .stButton > button:hover,
+            div.stButton > button:hover {{
+                opacity: 0.85 !important;
+                background-color: {primary_color} !important;
+            }}
+
+            /* Active tab underline */
+            .stTabs [data-baseweb="tab-highlight"] {{
+                background-color: {primary_color} !important;
+            }}
+            .stTabs [aria-selected="true"] {{
+                color: {primary_color} !important;
+            }}
+
+            /* Sidebar active item */
+            [data-testid="stSidebarNav"] a[aria-selected="true"] {{
+                color: {primary_color} !important;
+            }}
+
+            /* Top border accent */
+            [data-testid="stAppViewContainer"] > section:first-child {{
+                border-top: 4px solid {primary_color} !important;
+            }}
+
+            /* Links */
+            a {{
+                color: {primary_color} !important;
+            }}
+        </style>
+    """, unsafe_allow_html=True)
+
 def render_navbar():
+    apply_role_theme()   # ← add this one line
     """Render navigation bar and logout button"""
     col1, col2, col3 = st.columns([2, 1, 1])
     
