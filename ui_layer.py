@@ -85,10 +85,8 @@ def render_login_page():
         - patient123
         """)
 
-
-# =========================
 # REGISTRATION PAGE
-# =========================
+
 def render_registration_page():
     """Render registration page"""
 
