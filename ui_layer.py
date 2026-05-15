@@ -27,9 +27,8 @@ from data_layer import (
 from ai_assistant import AIChatAssistant
 
 
-# =========================
 # LOGIN PAGE
-# =========================
+
 def render_login_page():
     """Render login page"""
 
@@ -142,9 +141,8 @@ def render_registration_page():
             st.error("Please fill in all fields.")
 
 
-# =========================
 # NAVBAR
-# =========================
+
 def render_navbar():
     """Render top navbar"""
 
@@ -174,9 +172,8 @@ def render_navbar():
     st.divider()
 
 
-# =========================
 # DOCTOR DASHBOARD
-# =========================
+
 def render_doctor_dashboard():
     """Render doctor dashboard"""
 
@@ -190,9 +187,8 @@ def render_doctor_dashboard():
         "⚙️ Settings"
     ])
 
-    # =========================
     # ANALYTICS TAB
-    # =========================
+   
     with tab1:
 
         analytics = get_analytics_data(
@@ -243,9 +239,9 @@ def render_doctor_dashboard():
 
         st.bar_chart(df.set_index("Status"))
 
-    # =========================
+
     # MANAGE SCHEDULE TAB
-    # =========================
+    
     with tab2:
 
         st.write("### Create Available Time Slot")
@@ -332,9 +328,9 @@ def render_doctor_dashboard():
         else:
             st.info("No available slots yet.")
 
-    # =========================
+    
     # APPOINTMENTS TAB
-    # =========================
+    
     with tab3:
 
         st.write("### Your Appointments")
@@ -418,9 +414,9 @@ def render_doctor_dashboard():
         else:
             st.info("No appointments yet.")
 
-    # =========================
+   
     # AI TAB
-    # =========================
+    
     with tab4:
 
         st.write("### AI Assistant")
@@ -445,9 +441,9 @@ def render_doctor_dashboard():
         )
 
 
-# =========================
+
 # PATIENT DASHBOARD
-# =========================
+
 def render_patient_dashboard():
     """Render patient dashboard"""
 
@@ -459,9 +455,9 @@ def render_patient_dashboard():
         "💬 AI Chat"
     ])
 
-    # =========================
+    
     # BOOK APPOINTMENT
-    # =========================
+    
     with tab1:
 
         st.write("### Book Appointment")
@@ -554,9 +550,9 @@ def render_patient_dashboard():
                 "No available slots found."
             )
 
-    # =========================
+    
     # MY APPOINTMENTS
-    # =========================
+    
     with tab2:
 
         appointments = get_appointments_by_patient(
@@ -619,17 +615,17 @@ def render_patient_dashboard():
         else:
             st.info("No appointments found.")
 
-    # =========================
+    
     # AI CHAT TAB
-    # =========================
+    
     with tab3:
 
         render_patient_ai_chat()
 
 
-# =========================
+
 # AI ASSISTANT
-# =========================
+
 def render_ai_assistant():
     """Doctor AI assistant"""
 
@@ -662,9 +658,9 @@ def render_ai_assistant():
             st.success(response)
 
 
-# =========================
+
 # PATIENT AI CHAT
-# =========================
+
 def render_patient_ai_chat():
     """Patient AI pre-visit chat"""
 
